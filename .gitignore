@@ -1,4 +1,5 @@
 #deze dingen gaan we niet apart opslaan in Github
+#
 /node_modules
 /vendor
 .env
