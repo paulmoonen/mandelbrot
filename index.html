@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/stijlblad.css">
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="/assets/js/mapBereik.js" defer></script>
+    <script src="/assets/js/iteraties.js" defer></script>
+    <script src="/assets/js/inzoomen.js" defer></script>
+    <script src="/assets/js/instellingKnoppenListeners.js" defer></script>
+    <script src="/assets/js/kleurbepalen.js" defer></script>
+    <!--onderstaand bestand logica.js moet als laatste geladen worden, 
+        deze bevat aanroepen van methodes uit eerder geladen .js bestanden. -->
+    <script src="/assets/js/opstartcode.js" defer></script>
+    <!--met defer voorkomen we laadvolgordeproblemen en foutmeldingen-->
+    <title>Mandelbrotverzameling</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#floeppaneel"
+                aria-controls="offcanvasExample">
+                Instellingen
+            </button>
+
+            <div id="titelduo">
+                <h1>Mandelbrot- en Juliaverzamelingen</h1>
+                <p id="muisklik">Klik in of dichtbij de Mandelbrotverzameling</p>
+            </div>
+
+        </header>        
+
+        <div class="row">
+
+            <div class="col">
+                
+                <canvas id="MandelbrotCanvas" ></canvas>
+                
+            </div>
+
+            <div class="col">
+
+                <canvas id="Juliacanvas" style="display: none;"></canvas>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="floeppaneel" aria-labelledby="instellingen">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="Instellingen">Instellingen</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Selecteer kleurstijl:</p>
+
+            <input type="radio" name="kleurstijlkeuze" id="tomatensoep" class="selectie">
+            <label for="tomatensoep">Tomatensoep</label>
+            <br>
+
+            <input type="radio" name="kleurstijlkeuze" id="grijstinten" class="selectie">
+            <label for="grijstinten">Grijstinten</label>
+            <br>
+
+            <input type="radio" name="kleurstijlkeuze" id="legokleuren" class="selectie" >
+            <label for="legokleuren">Legokleuren</label>
+            <br>
+
+            <input type="radio" name="kleurstijlkeuze" id="snoepwinkel" class="selectie">
+            <label for="snoepwinkel">Snoepwinkel</label>
+            <br>
+
+            <input type="radio" name="kleurstijlkeuze" id="koelblauw" class="selectie" checked>
+            <label for="koelblauw">Koelblauw</label>
+            <br>
+            <br>
+
+            <p>Inzoomen of Julia</p>
+            <input type="radio" name="verzamelingsKeuze" id="MandelbrotZoom" class="JofM" checked>
+            <label for="MandelbrotZoom">Mandelbrot inzoomen</label>
+            <br>
+
+            <input type="radio" name="verzamelingsKeuze" id="ToonJulia" class="JofM" >
+            <label for="ToonJulia">Juliaverzamelingen verkennen</label>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
