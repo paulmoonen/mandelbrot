@@ -1,4 +1,4 @@
-# mandelbrot
+# Mandelbrot and Julia sets
 In the 1980's many math lovers coded fractals in BASIC.
 With relatively few linses of code, they summoned infinite complexity.
 
